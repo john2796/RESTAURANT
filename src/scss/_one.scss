@@ -1,0 +1,86 @@
+//Nav
+#one {
+  nav {
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: $white;
+    background: rgba(0, 0, 0, 0.329);
+    height: 100%;
+    width: 100%;
+  } //Slider Images
+  .slider-img {
+    position: relative;
+    background-image: url(../images/nav-slider-image-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+  } // Mobile Nav Holder
+  .mobile-nav-holder {
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    align-items: center;
+    #logo h2 {
+      font-size: 3rem;
+      text-align: center;
+    }
+  } // Hamburger Icon
+  .hamburger {
+    .line {
+      position: relative;
+      width: 4rem;
+      height: 1px;
+    }
+  } //Slider Caption 
+  .slider-caption {
+    display: flex;
+    flex-direction: column;
+    height: 75vh;
+    justify-content: center;
+  }
+  .slider-text {
+    text-align: center;
+    .intro-text {
+      letter-spacing: 0.15rem;
+    }
+    h1 {
+      font-weight: 400;
+      margin: 1rem 0;
+    }
+    p {
+      width: 14rem;
+      margin: 0 auto;
+    }
+    .slider-btn {
+      color: $white;
+      font-weight: 400;
+      text-decoration: none;
+      padding: 2rem 0 0.65rem 0;
+      display: inline-block;
+      border-bottom: 2px $white solid;
+      letter-spacing: 0.15rem;
+      font-size: 0.75rem;
+    }
+  }
+  #slider-circle-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    margin: 0 auto;
+    width: 100%;
+  }
+  #slider-circle-icon i {
+    font-size: 8px;
+    padding: 0 7px;
+    color: rgb(248, 246, 246);
+    &:last-child {
+      font-size: 1rem;
+    }
+  }
+} // One Ends Here
