@@ -152,7 +152,7 @@ img {
   left: 0;
   top: 0;
   color: #fff;
-  background: rgba(0, 0, 0, 0.329);
+  background: rgba(0, 0, 0, 0.37);
   height: 100%;
   width: 100%; }
 
@@ -180,10 +180,56 @@ img {
     font-size: 3rem;
     text-align: center; }
 
-#one .hamburger .line {
-  position: relative;
-  width: 4rem;
-  height: 1px; }
+#one .menu-toggle {
+  padding: 1em;
+  cursor: pointer;
+  z-index: 999; }
+  #one .menu-toggle .hamburger,
+  #one .menu-toggle .hamburger::before,
+  #one .menu-toggle .hamburger::after {
+    content: '';
+    display: block;
+    background: #fff;
+    height: 3px;
+    width: 2em;
+    border-radius: 3px;
+    -webkit-transition: all ease-in-out 200ms;
+    transition: all ease-in-out 200ms; }
+  #one .menu-toggle .hamburger::before {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+    width: 2em; }
+  #one .menu-toggle .hamburger::after {
+    -webkit-transform: translateY(3px);
+    transform: translateY(3px);
+    width: 2em; }
+  #one .menu-toggle .menu-toggle--open .hamburger {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg); }
+  #one .menu-toggle .changeHamburgerStyle {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg); }
+  #one .menu-toggle .changeHamburgerStyle::before {
+    opacity: 0; }
+  #one .menu-toggle .changeHamburgerStyle::after {
+    -webkit-transform: translateY(-2px) rotate(-90deg);
+    transform: translateY(-2px) rotate(-90deg); }
+
+#one .mobile-site-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  background: gray;
+  width: 0;
+  min-height: 100vh;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out; }
+  #one .mobile-site-nav h1 {
+    padding-top: 100px; }
+
+#one .site-nav--open {
+  width: 90%; }
 
 #one .slider-caption {
   display: -webkit-box;
@@ -201,12 +247,15 @@ img {
 #one .slider-text {
   text-align: center; }
   #one .slider-text .intro-text {
-    letter-spacing: 0.15rem; }
+    letter-spacing: 0.15rem;
+    font-size: 1.1rem;
+    font-weight: 400; }
   #one .slider-text h1 {
     font-weight: 400;
     margin: 1rem 0; }
   #one .slider-text p {
-    width: 14rem;
+    letter-spacing: 1px;
+    width: 16rem;
     margin: 0 auto; }
   #one .slider-text .slider-btn {
     color: #fff;

@@ -5,7 +5,7 @@
     left: 0;
     top: 0;
     color: $white;
-    background: rgba(0, 0, 0, 0.329);
+    background: rgba(0, 0, 0, 0.37);
     height: 100%;
     width: 100%;
   } //Slider Images
@@ -28,12 +28,57 @@
       text-align: center;
     }
   } // Hamburger Icon
-  .hamburger {
-    .line {
-      position: relative;
-      width: 4rem;
-      height: 1px;
+  .menu-toggle {
+    padding: 1em;
+    cursor: pointer;
+    z-index: 999;
+    .hamburger,
+    .hamburger::before,
+    .hamburger::after {
+      content: '';
+      display: block;
+      background: $white;
+      height: 3px;
+      width: 2em;
+      border-radius: 3px;
+      transition: all ease-in-out 200ms;
+    } //transform to regular hamburger
+    .hamburger::before {
+      transform: translateY(-6px);
+      width: 2em;
     }
+    .hamburger::after {
+      transform: translateY(3px);
+      width: 2em;
+    }
+    .menu-toggle--open .hamburger {
+      transform: rotate(45deg);
+    }
+    .changeHamburgerStyle {
+      transform: rotate(45deg);
+    }
+    .changeHamburgerStyle::before {
+      opacity: 0;
+    }
+    .changeHamburgerStyle::after {
+      transform: translateY(-2px) rotate(-90deg);
+    }
+  } //Mobile Menu Holder
+  .mobile-site-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    background: gray;
+    width: 0;
+    min-height: 100vh;
+    transition: all 300ms ease-in-out;
+    h1 {
+      padding-top: 100px;
+    }
+  } // jquery class
+  .site-nav--open {
+    width: 90%;
   } //Slider Caption 
   .slider-caption {
     display: flex;
@@ -45,13 +90,16 @@
     text-align: center;
     .intro-text {
       letter-spacing: 0.15rem;
+      font-size: 1.1rem;
+      font-weight: 400;
     }
     h1 {
       font-weight: 400;
       margin: 1rem 0;
     }
     p {
-      width: 14rem;
+      letter-spacing: 1px;
+      width: 16rem;
       margin: 0 auto;
     }
     .slider-btn {
