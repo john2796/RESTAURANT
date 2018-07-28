@@ -113,7 +113,11 @@
           color: $white;
         } // Sub Menu Display none until you click it or hover don't know yet
         //Sub Menu Styling 
+        .menu-angle-up {
+          font-size: 18px;
+        }
         .sub-menu {
+          margin-left: 10px;
           .menu-item a {
             font-size: 1rem;
             text-decoration: none;
@@ -121,8 +125,12 @@
             display: block;
             letter-spacing: 2px;
             font-weight: 100;
-          }
-        }
+            transition: all 400ms;
+            &:hover {
+              color: $white;
+            } // Hover effect
+          } // Menu Item > a
+        } //sub menu ends here
       } // menu-mobile ends here
     } //modal menu container
   } // jquery class
