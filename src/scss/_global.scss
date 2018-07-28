@@ -109,6 +109,7 @@ body {
   box-sizing: border-box;
   font-size: 14px;
   font-family: 'Work Sans';
+  overflow-y: hidden;
 }
 
 ol,
@@ -146,8 +147,9 @@ a {
 }
 
 h1 {
-  font-weight: 400;
-  font-size: 3.5rem;
+  font-size: 3.3rem;
+  font-family: 'lora';
+  letter-spacing: 1px;
 }
 
 img {

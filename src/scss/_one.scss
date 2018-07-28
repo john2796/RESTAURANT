@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster+Two');
 //Nav
 #one {
   nav {
@@ -21,11 +22,25 @@
   .mobile-nav-holder {
     display: flex;
     justify-content: space-between;
-    height: 100px;
+    height: 90px;
     align-items: center;
-    #logo h2 {
-      font-size: 3rem;
+    .logo h2 {
+      font-family: Lora, serif;
+      font-size: 1.4rem;
       text-align: center;
+      letter-spacing: 3.4px;
+    }
+    #logo-title {
+      font-style: italic;
+      font-size: 13px;
+      letter-spacing: 1.2px;
+      display: inline-block;
+      margin-right: 1rem;
+      &::first-letter {
+        font-family: 'Lobster Two', cursive;
+        letter-spacing: 3px;
+        font-size: 1rem;
+      }
     }
   } // Hamburger Icon
   .menu-toggle {
@@ -42,6 +57,7 @@
       width: 2em;
       border-radius: 3px;
       transition: all ease-in-out 200ms;
+      color: $white;
     } //transform to regular hamburger
     .hamburger::before {
       transform: translateY(-6px);
@@ -56,12 +72,16 @@
     }
     .changeHamburgerStyle {
       transform: rotate(45deg);
+      width: 1.2rem;
+      height: 2px;
     }
     .changeHamburgerStyle::before {
       opacity: 0;
     }
     .changeHamburgerStyle::after {
-      transform: translateY(-2px) rotate(-90deg);
+      transform: translateY(-3px) rotate(-90deg);
+      width: 1.2rem;
+      height: 2px;
     }
   } //Mobile Menu Holder
   .mobile-site-nav {
@@ -69,12 +89,27 @@
     top: 0;
     left: 0;
     overflow: hidden;
-    background: gray;
     width: 0;
     min-height: 100vh;
     transition: all 300ms ease-in-out;
-    h1 {
-      padding-top: 100px;
+    z-index: 10;
+    background-color: $light-black;
+    .modal-menu-container {
+      margin-top: 100px;
+      width: 100%;
+      .menu-mobile {
+        margin: 0 auto;
+        margin-left: 48px;
+        .current-menu-item {
+          color: $white !important;
+        }
+        .menu-item a {
+          color: $gray;
+        } // Sub Menu Display none until you click it or hover don't know yet
+        .sub-menu {
+          display: none;
+        }
+      }
     }
   } // jquery class
   .site-nav--open {
@@ -83,7 +118,7 @@
   .slider-caption {
     display: flex;
     flex-direction: column;
-    height: 75vh;
+    height: 80vh;
     justify-content: center;
   }
   .slider-text {
@@ -94,13 +129,19 @@
       font-weight: 400;
     }
     h1 {
-      font-weight: 400;
+      font-weight: 300;
       margin: 1rem 0;
     }
     p {
       letter-spacing: 1px;
-      width: 16rem;
+      width: 23rem;
       margin: 0 auto;
+      margin-top: 2rem;
+    }
+    .intro-text-paragraph {
+      width: 18rem;
+      margin: 0 auto;
+      display: block;
     }
     .slider-btn {
       color: $white;
@@ -126,9 +167,9 @@
   #slider-circle-icon i {
     font-size: 8px;
     padding: 0 7px;
-    color: rgb(248, 246, 246);
+    color: rgba(248, 246, 246, 0.849);
     &:last-child {
-      font-size: 1rem;
+      font-size: 15px;
     }
   }
 } // One Ends Here
