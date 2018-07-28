@@ -251,13 +251,23 @@ img {
     width: 100%; }
     #one .mobile-site-nav .modal-menu-container .menu-mobile {
       margin: 0 auto;
-      margin-left: 48px; }
-      #one .mobile-site-nav .modal-menu-container .menu-mobile .current-menu-item {
-        color: #fff !important; }
-      #one .mobile-site-nav .modal-menu-container .menu-mobile .menu-item a {
-        color: #999999; }
-      #one .mobile-site-nav .modal-menu-container .menu-mobile .sub-menu {
-        display: none; }
+      margin-left: 48px;
+      cursor: pointer; }
+      #one .mobile-site-nav .modal-menu-container .menu-mobile .menu-item > a {
+        color: #999999;
+        font-size: 1.5rem;
+        text-decoration: none;
+        font-weight: 500;
+        letter-spacing: 2px; }
+      #one .mobile-site-nav .modal-menu-container .menu-mobile .current-menu-item > a:first-child {
+        color: #fff; }
+      #one .mobile-site-nav .modal-menu-container .menu-mobile .sub-menu .menu-item a {
+        font-size: 1rem;
+        text-decoration: none;
+        padding-top: 1.2rem;
+        display: block;
+        letter-spacing: 2px;
+        font-weight: 100; }
 
 #one .site-nav--open {
   width: 90%; }

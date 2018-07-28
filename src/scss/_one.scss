@@ -100,17 +100,31 @@
       .menu-mobile {
         margin: 0 auto;
         margin-left: 48px;
-        .current-menu-item {
-          color: $white !important;
-        }
-        .menu-item a {
+        cursor: pointer;
+        .menu-item {}
+        .menu-item>a {
           color: $gray;
-        } // Sub Menu Display none until you click it or hover don't know yet
-        .sub-menu {
-          display: none;
+          font-size: 1.5rem;
+          text-decoration: none;
+          font-weight: 500;
+          letter-spacing: 2px;
         }
-      }
-    }
+        .current-menu-item>a:first-child {
+          color: $white;
+        } // Sub Menu Display none until you click it or hover don't know yet
+        //Sub Menu Styling 
+        .sub-menu {
+          .menu-item a {
+            font-size: 1rem;
+            text-decoration: none;
+            padding-top: 1.2rem;
+            display: block;
+            letter-spacing: 2px;
+            font-weight: 100;
+          }
+        }
+      } // menu-mobile ends here
+    } //modal menu container
   } // jquery class
   .site-nav--open {
     width: 90%;
