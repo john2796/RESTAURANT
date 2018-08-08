@@ -1,197 +1,438 @@
-@import url('https://fonts.googleapis.com/css?family=Lobster+Two');
+/* WHATS INCLUDED IN SECTION ONE
+-HEADER 
+-NAV
+-RESPONSIVE DESIGN FOR MOBILE , TABLET, AND DESKTOP
+-IMAGE CAROUSEL 
+*/
+@import url("https://fonts.googleapis.com/css?family=Lobster+Two");
 //Nav
 #one {
-  nav {
-    position: absolute;
-    left: 0;
-    top: 0;
-    color: $white;
-    background: rgba(0, 0, 0, 0.37);
-    height: 100%;
-    width: 100%;
-  } //Slider Images
-  .slider-img {
-    position: relative;
-    background-image: url(../images/nav-slider-image-1.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 100vh;
-  } // Mobile Nav Holder
-  .mobile-nav-holder {
-    display: flex;
-    justify-content: space-between;
-    height: 90px;
-    align-items: center;
-    .logo h2 {
+
+    nav {
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: $white;
+        height: 100%;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.247);
+    } 
+
+    //Slider Images
+    .carousel-inner img {
+        object-fit: cover;
+        height: 100vh;
+        width: 100%;
+        transition:100s ease-in-out left;
+    }
+
+    // Mobile Nav Holder
+    .mobile-nav-holder {
+        display: flex;
+        justify-content: space-between;
+        height: 90px;
+        align-items: center;
+        .logo h2 {
+            font-family: Lora, serif;
+            font-size: 1.4rem;
+            text-align: center;
+            letter-spacing: 3.4px;
+        }
+        .logo-title {
+            font-style: italic;
+            font-size: 13px;
+            letter-spacing: 1.2px;
+            display: inline-block;
+            margin-right: 1rem;
+            font-family: 'lora';
+            &::first-letter {
+              font-family: 'lora';
+              letter-spacing: 3px;
+              font-size: 1rem;
+            }
+        }
+    } 
+    @media(min-width:768px){
+        .mobile-nav-holder {
+            display:none;
+        }
+    }
+    // Hamburger Icon
+    .menu-toggle {
+        padding: 1em;
+        cursor: pointer;
+        z-index: 999;
+        .hamburger,
+        .hamburger::before,
+        .hamburger::after {
+            content: "";
+            display: block;
+            background: $white;
+            height: 3px;
+            width: 2em;
+            border-radius: 3px;
+            transition: all ease-in-out 200ms;
+            color: $white;
+        } //transform to regular hamburger
+        .hamburger::before {
+            transform: translateY(-6px);
+            width: 2em;
+        }
+        .hamburger::after {
+            transform: translateY(3px);
+            width: 2em;
+        }
+        .menu-toggle--open .hamburger {
+            transform: rotate(45deg);
+            
+        }
+        .changeHamburgerStyle {
+            transform: rotate(45deg);
+            width: 1.2rem;
+            height: 2px;
+        }
+        .changeHamburgerStyle::before {
+            opacity: 0;
+        }
+        .changeHamburgerStyle::after {
+            transform: translateY(-3px) rotate(-90deg);
+            width: 1.2rem;
+            height: 2px;
+        }
+    } //Mobile Menu Holder
+    .mobile-site-nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100vh;
+        z-index: 10;
+        background-color: $black;
+        transition: 0.1s;
+        overflow-y: auto;
+        overflow-x: hidden;
+        
+       
+        // overflow-y: hidden;
+        // !Dropdown Menu
+        //This will toggle Item open and close
+        .item ul,
+        .nav input[type="checkbox"] {
+            display: none;
+            outline:none;
+        }
+        .item input:checked~ul {
+            display: block;
+        }  
+        // !Arrow
+        .arrow {
+            float: right;
+            vertical-align: middle;
+            z-index: 0;
+            margin: 14.56px 148px 0 0;
+            color: $gray;
+        }
+        .item input+.arrow {
+            transform: rotate(-180deg);
+            transition: 0.1s;
+        }
+        .item input:checked+.arrow {
+            transform: rotate(0deg);
+            transition: 0.1s;
+        }
+     
+        // !/Arrow up and down
+        label:hover {
+            cursor: pointer;
+            color: $white;
+
+        }
+        label {
+            width: 100%;
+            display: block;
+            position: relative;
+            z-index: 3;
+          
+        }
+        h3,
+        label {
+            color: $gray;
+            padding: 0 3em;
+            font-size: 1.4rem;
+            letter-spacing: 2px;
+            font-weight: 500;
+            width: 100%;
+            line-height: 43px;
+
+        }
+        .current-highlight {
+            color: $white;
+            
+        }
+        .nav {
+            margin-top: 70px;
+        }
+        //this styling will remove the blue highlight when your clicking on items on dropdown menu 
+         .nav{
+        -webkit-touch-callout: none;
+        -webkit-user-select: none; /* Webkit */
+        -moz-user-select: none;    /* Firefox */
+        -ms-user-select: none;     /* IE 10  */
+        
+        /* Currently not supported in Opera but will be soon */
+        -o-user-select: none;
+        user-select: none;  
+        }
+        .item ul a {
+            color: $gray;
+            padding: 0 5rem;
+            line-height: 2.5rem;
+            text-decoration: none;
+            font-weight: 100;
+            
+        }
+        .item ul li:first-child a{
+            color: $white;
+        }
+        .item ul a:hover {
+            color: $white;
+        }
+        // !/Dropdown Menu
+        // Mobile Menu Content & Contact Info
+        .mobile-menu-content {
+            // overflow: hidden;
+            color: $gray;
+            font-size: 15px;
+            line-height: 1.7; 
+            width: 60%;
+            margin: 0 auto;
+            margin-top: 60px;
+            
+           h4 {
+               margin: 1rem 0;
+               font-size: 25px;
+           } 
+        }
+        .social-media-mobile-menu {
+            display: flex;
+            height: 100px;
+            width: 80%;
+            justify-content: center;
+            align-items: center;
+            a {color: $gray;}
+            i {
+            padding: 0 8px;
+            font-size: 15px;
+           }
+
+        }
+    }
+    // jquery class for toggle the menu
+    //this control the width of the nav for mobile Drowpdown Menu 
+    .site-nav--open {
+      width: 355px; 
+    }
+     //Slider Caption
+    .slider-caption {
+        display: flex;
+        flex-direction: column;
+        height: 80vh;
+        justify-content: center;
+        position: relative;
+    }
+    .slider-text {
+        text-align: center;
+        .intro-text {
+            letter-spacing: 0.15rem;
+            font-size: 1.1rem;
+            font-weight: 400;
+        
+        }
+        h1 {
+            font-weight: 300;
+            margin: 1rem 0;
+            font-family: 'lora';
+        }
+        @media(min-width: 768px){
+            h1 {
+                font-size: 6rem;
+                letter-spacing: 3px;
+            }
+        }
+        p {
+            letter-spacing: 1px;
+            width: 75%;
+            margin: 0 auto;
+            margin-top: 2rem;
+        }
+     
+        .slider-btn {
+            color: $white;
+            font-weight: 400;
+            text-decoration: none;
+            padding: 2rem 0 0.65rem 0;
+            display: inline-block;
+            border-bottom: 2px $white solid;
+            letter-spacing: 0.15rem;
+            font-size: 0.75rem;
+        }
+    }
+    .carousel-text {
+        position: absolute;
+        top: -60vh;
+        left: 0;
+        width: 100%;
+        font-size: 16px;
+        letter-spacing: 2px;
+        color: white;
+        z-index: 10000;
+        opacity: inherit;
+        @media (min-width: 768px){
+          font-size: 1.5rem;
+        }
+
+
+    }
+ //DESKTOP MENU STARTS HERE
+ .desktop-outer {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     height: 100px;
+     //logo styling 
+     .logo h2 {
       font-family: Lora, serif;
       font-size: 1.4rem;
       text-align: center;
       letter-spacing: 3.4px;
-    }
-    #logo-title {
+  }
+  .logo-title {
       font-style: italic;
       font-size: 13px;
       letter-spacing: 1.2px;
       display: inline-block;
       margin-right: 1rem;
       &::first-letter {
-        font-family: 'Lobster Two', cursive;
-        letter-spacing: 3px;
-        font-size: 1rem;
+          font-family: "Lobster Two", cursive;
+          letter-spacing: 3px;
+          font-size: 1rem;
+      }
+  }
+ }
+ .desktop-menu {
+     display: flex; 
+       a{
+       padding: 12px;
+       color: $light-white;
+       font-weight: 100 ;
+       text-decoration: none;
+       text-transform: uppercase;
+       font-size: 12px;
+       transition: all ease-in-out 250ms;
+       display: inline-block;
+       position: relative;
+       letter-spacing: 2px;
+       padding-bottom: 20px;
+       &::after {
+        content: "";
+        position: absolute;
+        top: 80%;
+        height: 1px;
+        width: 0%;
+        left: 45%;
+        background-color: $blue;       
+        transition: 250ms ease-out all .1s;
+    }
+       &:hover::after{
+        width: 55%;
+        left: 22.5%;
+        transition: 0.3s ease all;
+      }
+      &:hover {
+        color: $blue;
+      }
+   }
+   .desktop-active{
+    color: $blue;
+    &::after {
+        content: "";
+        position: absolute;
+        top: 80%;
+        height: 1px;
+        width: 55%;
+        left: 22.5%;
+        background-color: $blue;       
+        transition: 250ms ease-out all .1s;
       }
     }
-  } // Hamburger Icon
-  .menu-toggle {
-    padding: 1em;
-    cursor: pointer;
-    z-index: 999;
-    .hamburger,
-    .hamburger::before,
-    .hamburger::after {
-      content: '';
-      display: block;
-      background: $white;
-      height: 3px;
-      width: 2em;
-      border-radius: 3px;
-      transition: all ease-in-out 200ms;
-      color: $white;
-    } //transform to regular hamburger
-    .hamburger::before {
-      transform: translateY(-6px);
-      width: 2em;
-    }
-    .hamburger::after {
-      transform: translateY(3px);
-      width: 2em;
-    }
-    .menu-toggle--open .hamburger {
-      transform: rotate(45deg);
-    }
-    .changeHamburgerStyle {
-      transform: rotate(45deg);
-      width: 1.2rem;
-      height: 2px;
-    }
-    .changeHamburgerStyle::before {
-      opacity: 0;
-    }
-    .changeHamburgerStyle::after {
-      transform: translateY(-3px) rotate(-90deg);
-      width: 1.2rem;
-      height: 2px;
-    }
-  } //Mobile Menu Holder
-  .mobile-site-nav {
+    // Sub menu 
+    .desktop-sub-menu {
+    padding: 12px 0;
     position: absolute;
-    top: 0;
-    left: 0;
-    overflow: hidden;
-    width: 0;
-    min-height: 100vh;
-    transition: all 300ms ease-in-out;
-    z-index: 10;
-    background-color: $light-black;
-    .modal-menu-container {
-      margin-top: 100px;
-      width: 100%;
-      .menu-mobile {
-        margin: 0 auto;
-        margin-left: 48px;
-        cursor: pointer;
-        .menu-item {}
-        .menu-item>a {
-          color: $gray;
-          font-size: 1.5rem;
-          text-decoration: none;
-          font-weight: 500;
-          letter-spacing: 2px;
-        }
-        .current-menu-item>a:first-child {
-          color: $white;
-        } // Sub Menu Display none until you click it or hover don't know yet
-        //Sub Menu Styling 
-        .menu-angle-up {
-          font-size: 18px;
-        }
-        .sub-menu {
-          margin-left: 10px;
-          .menu-item a {
-            font-size: 1rem;
-            text-decoration: none;
-            padding-top: 1.2rem;
-            display: block;
-            letter-spacing: 2px;
-            font-weight: 100;
-            transition: all 400ms;
-            &:hover {
-              color: $white;
-            } // Hover effect
-          } // Menu Item > a
-        } //sub menu ends here
-      } // menu-mobile ends here
-    } //modal menu container
-  } // jquery class
-  .site-nav--open {
-    width: 90%;
-  } //Slider Caption 
-  .slider-caption {
-    display: flex;
-    flex-direction: column;
-    height: 80vh;
-    justify-content: center;
-  }
-  .slider-text {
+    top: 75px;
+    margin-left: -50px;
+    background: #9fc4ce;
+    z-index: 5;
+    width: 180px;
     text-align: center;
-    .intro-text {
-      letter-spacing: 0.15rem;
-      font-size: 1.1rem;
-      font-weight: 400;
+    display: none;
+      &::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: -6px;
+        margin-left: -10px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 10px 10px 10px;
+        border-color: transparent transparent #9fc4ce transparent;
+      }
+      a{
+        color: $black;
+        width: 100%;
+      }
     }
-    h1 {
-      font-weight: 300;
-      margin: 1rem 0;
-    }
-    p {
-      letter-spacing: 1px;
-      width: 23rem;
-      margin: 0 auto;
-      margin-top: 2rem;
-    }
-    .intro-text-paragraph {
-      width: 18rem;
-      margin: 0 auto;
+    & li:hover ul.desktop-sub-menu{
       display: block;
     }
-    .slider-btn {
-      color: $white;
-      font-weight: 400;
-      text-decoration: none;
-      padding: 2rem 0 0.65rem 0;
-      display: inline-block;
-      border-bottom: 2px $white solid;
-      letter-spacing: 0.15rem;
-      font-size: 0.75rem;
-    }
+} //desktop Menu Ends here
+
+
+ .desktop-menu-btn{
+   color: rgba(0, 0, 0, 0.781);
+   background: $white;
+   text-align: center;
+   font-weight: 600;
+   letter-spacing: 1px;
+   font-size: 14px;
+   display: inline-block;
+   text-decoration: none;
+   padding: 20px 35px;
+   border: 2px solid $white;
+   box-sizing: border-box;
+   border-radius: 2px;
+   transition: all 400ms;
+   &:hover {
+     background: transparent;
+     color: $white;
+   }
+ }
+ @media(max-width: 768px){
+     .desktop {
+         display: none;
+     }
+ }
+ @media(max-width: 1000px){
+  .desktop-book-table {
+    display: none;
   }
-  #slider-circle-icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    bottom: 20px;
-    left: 0;
-    margin: 0 auto;
-    width: 100%;
-  }
-  #slider-circle-icon i {
-    font-size: 8px;
-    padding: 0 7px;
-    color: rgba(248, 246, 246, 0.849);
-    &:last-child {
-      font-size: 15px;
-    }
+ }
+ @media(min-width: 768px){
+     .wrapper {
+        width: 95%;
+        max-width: 1500px;
+        margin: 0 auto;
+     }
   }
 } // One Ends Here

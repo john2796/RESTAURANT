@@ -2,106 +2,510 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Miranda fine dining</title>
-	<!-- Google Fonts -->
-	<link rel='stylesheet' id='caverta-font-css' href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700%7CLora:400,700,400i,700i"
-	  type='text/css' media='all' />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Miranda fine dining</title>
+    <!-- Google Fonts -->
+    <link rel='stylesheet' id='caverta-font-css' href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700%7CLora:400,700,400i,700i" type='text/css' media='all' />
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <!-- Bootstrap Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional Bootstrap theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
-	<!-- Font Awesome Icons -->
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
-	  crossorigin="anonymous">
-
-	<link rel="stylesheet" href="css/style.css">
+    
+    <!-- Main CSS Style Sheet -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-	<section id="one">
-		<header>
-			<div class="slider-img"></div>
-			<nav>
-				<!-- Mobile-nav-holder -->
-				<div class="wrapper">
-					<div class="mobile-nav-holder">
-						<div class="menu-toggle">
-							<div class="hamburger"></div>
-						</div>
-						<div class="logo">
-							<h2>MIRANDA
-								<br>
-								<span id="logo-title">fine dining</span>
-							</h2>
-						</div>
-					</div>
-				</div>
-				<!-- Mobile Menu  -->
-				<div class="mobile-site-nav">
-					<div class="modal-menu-container">
-						<ul class="menu-mobile">
-							<li class="menu-item menu-item-has-children current-menu-item">
-								<a href="">Home
-									<span class="menu-angle-up">
-										<i class="fa fa-angle-up"></i>
-									</span>
-								</a>
-								<ul class="sub-menu">
-									<li class="menu-item current-menu-item">
-										<a href="#">Home 1</a>
-									</li>
-									<li class="menu-item">
-										<a href="#">Home 2</a>
-									</li>
-									<li class="menu-item">
-										<a href="#">Home 3</a>
-									</li>
-									<li class="menu-item">
-										<a href="#">Home 4</a>
-									</li>
-									<li class="menu-item">
-										<a href="#">header 2</a>
-									</li>
-									<li class="menu-item">
-										<a href="#">Header 3 </a>
-									</li>
-								</ul>
-							</li>
-							<li class="menu-item menu-item-has-children">
+    <section id="one">
+        <header>
+            <div id="my-slider" class="carousel slide" data-ride="carousel" data-interval="10000">
+            <!-- Indicator dot Nov -->
+            <ol class="carousel-indicators">
+                <li data-target="#my-slider" data-slide-to="0 " class="active"></li>
+                <li data-target="#my-slider" data-slide-to="1"></li>
+                <li data-target="#my-slider" data-slide-to="2"></li>
+            </ol>
+            <!--/ Indicator dot Nov -->
+            <!-- Wrapper for Slides -->
+            <div class="carousel-inner" role="listbox">
+                <!-- Carousel Pages Only first One Needs the Active  First Page-->
+                <div class="item active">
+                    <!-- Pexels Demo Image For Restaurant First Image -->
+                    <img src="https://images.pexels.com/photos/262918/pexels-photo-262918.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1000" alt="restaurant image">
+                    <div class="carousel-caption">
+                       <div class="carousel-text">DINNING AT</div>
+                    </div>
+                </div>
+               <!-- Carousel Pages Only first One Needs the Active  Second Page-->
+               <div class="item">
+                    <!-- Pexels Demo Image For Restaurant Second Image -->
+                    <img src="https://images.pexels.com/photos/858508/pexels-photo-858508.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1000" alt="restaurant image">
+                    <div class="carousel-caption">
+                       <div class="carousel-text">EVENTS AT</div>
+                    </div>
+                </div>
+                  <!-- Carousel Pages Only first One Needs the Active  third Page-->
+               <div class="item">
+                    <!-- Pexels Demo Image For Restaurant Second Image -->
+                    <img src="https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1000" alt="restaurant image">
+                    <div class="carousel-caption">
+                        <div class="carousel-text">HAPPY HOURS AT</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <!--/ Wrapper for Slider -->
+            <nav>
+                <!-- Mobile-nav-holder -->
+                <div class="wrapper">
+                    <div class="mobile-nav-holder">
+                        <div class="menu-toggle">
+                            <div class="hamburger"></div>
+                        </div>
+                        <div class="logo">
+                            <h2>MIRANDA
+                                <br>
+                                <span class="logo-title">fine dining</span>
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+                <!-- Mobile Menu  -->
+                <div class="mobile-site-nav">
+                    <!-- Nav -->
+                    <!-- Dropdown Menu -->
+                    <div class="nav">
+                        <div class="multi-level">
+                            <div class="item">
+                                <input type="checkbox" id="A">
+                                <div class="arrow current-highlight">
+                                    <i class="fas fa-angle-up"></i>
+                                </div>
+                                <label for="A" class="current-highlight">Home</label>
+                                <ul>
+                                    <li><a href="#" class="current-highlight">Home 1</a></li>
+                                    <li><a href="#">Home 2</a></li>
+                                    <li><a href="#">Home 3</a></li>
+                                    <li><a href="#">Home 4</a></li>
+                                    <li><a href="#">Home 5</a></li>
+                                </ul>
+                            </div>
+                            <!-- Second Item -->
+                            <div class="item">
+                                <input type="checkbox" id="F">
+                                
+                                
+                                <div class="arrow">
+                                    <i class="fas fa-angle-up"></i>
+                                </div> <label for="F">Menu</label>
+                                <ul>
+                                    <li><a href="#">Menu 1</a></li>
+                                    <li><a href="#">Menu 2</a></li>
+                                    <li><a href="#">Menu 3</a></li>
+                                    <li><a href="#">Menu 4</a></li>
+                                    <li><a href="#">Menu 5</a></li>
+                                </ul>
+                            </div>
+                            <!-- /Second Item -->
+                            <!-- third Item -->
+                            <div class="item">
+                                <h3>Reservation</h3>
+                            </div>
+                            <!-- fourth Item -->
+                            <div class="item">
+                                <input type="checkbox" id="B">
+                                
+                                
+                                <div class="arrow">
+                                    <i class="fas fa-angle-up"></i>
+                                </div> <label for="B">Blog</label>
+                                <ul>
+                                    <li><a href="#">BLog 1</a></li>
+                                    <li><a href="#">BLog 2</a></li>
+                                    <li><a href="#">BLog 3</a></li>
+                                    <li><a href="#">BLog 4</a></li>
+                                    <li><a href="#">BLog 5</a></li>
+                                </ul>
+                            </div>
+                            <!-- fifth Item -->
+                            <div class="item">
+                                <input type="checkbox" id="C">
+                                <div class="arrow">
+                                    <i class="fas fa-angle-up"></i>
+                                </div>
+                                <label for="C">Team</label>
+                                <ul>
+                                    <li><a href="#">Team 1</a></li>
+                                    <li><a href="#">Team 2</a></li>
+                                    <li><a href="#">Team 3</a></li>
+                                    <li><a href="#">Team 4</a></li>
+                                    <li><a href="#">Team 5</a></li>
+                                </ul>
+                            </div>
+                            <!-- sixth Item -->
+                            <div class="item">
+                                <input type="checkbox" id="D">
+                                <div class="arrow">
+                                    <i class="fas fa-angle-up"></i>
+                                </div>
+                                <label for="D">Gallery</label>
+                                <ul>
+                                    <li><a href="#">Gallery 1</a></li>
+                                    <li><a href="#">Gallery 2</a></li>
+                                    <li><a href="#">Gallery 3</a></li>
+                                    <li><a href="#">Gallery 4</a></li>
+                                    <li><a href="#">Gallery 5</a></li>
+                                </ul>
+                            </div>
+                            <!-- seventh Item -->
+                            <div class="item">
+                                <input type="checkbox" id="E">
+                                <div class="arrow">
+                                    <i class="fas fa-angle-up"></i>
+                                </div>
+                                <label for="E">Contact</label>
+                                <ul>
+                                    <li><a href="#">Contact 1</a></li>
+                                    <li><a href="#">Contact 2</a></li>
+                                    <li><a href="#">Contact 3</a></li>
+                                    <li><a href="#">Contact 4</a></li>
+                                    <li><a href="#">Contact 5</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!--/ Dropdown Menu -->
+                        <!-- Mobile Menu Content & Contact Info -->
+                        <div class="mobile-menu-content">
+                            <h5>123 Testing Ave</h5>
+                            <h5>San Diego, Californa 1111</h5>
+                            <h4>+1 800 000 1234</h4>
+                            <h5>contact@example.com</h5>
+                            <div class="social-media-mobile-menu">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                                <a href="#"><i class="fab fa-tripadvisor"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-pinterest"></i></a>
+                            </div>
+                        </div>
+                        <!--/ Mobile Menu Content & Contact Info -->
+                    </div>
+                </div>
+                <!-- /Nav -->
+                <!--  / Mobile Menu  -->
+                <!-- Desktop Navigation -->
+                <div class="desktop">
+                    <div class="wrapper">
+                        <div class="desktop-outer">
+                            <div class="logo">
+                              <h2>MIRANDA<br><span class="logo-title">fine dining</span> </h2>
+                            </div>
+                            <!-- Desktop dropdown Menu  -->
+                            <ul class="desktop-menu">
+                                <li><a href="#" class="desktop-active">Home</a>
+                                  <!-- Desktop Sub-Menus -->
+                                  <ul class="desktop-sub-menu">
+                                    <li><a href="#">Home 1</a></li>
+                                    <li><a href="#">Home 2</a></li>
+                                    <li><a href="#">Home 3</a></li>
+                                    <li><a href="#">Home 4</a></li>
+                                  </ul>
+                                  <!--/ Desktop Sub-Menus -->
+                                </li>
+                                <li><a href="#">Menu</a>
+                                      <!-- Desktop Sub-Menus -->
+                                  <ul class="desktop-sub-menu">
+                                    <li><a href="#">Menus 1</a></li>
+                                    <li><a href="#">Menus 2</a></li>
+                                    <li><a href="#">Menus 3</a></li>
+                                    <li><a href="#">Menus 4</a></li>
+                                  </ul>
+                                  <!--/ Desktop Sub-Menus -->
+                                </li>
+                                <li><a href="#">Reservation</a></li>
+                                <li><a href="#">Blog</a>
+                                      <!-- Desktop Sub-Menus -->
+                                     <ul class="desktop-sub-menu">
+                                    <li><a href="#">Blog 1</a></li>
+                                    <li><a href="#">Blog 2</a></li>
+                                    <li><a href="#">Blog 3</a></li>
+                                    <li><a href="#">Blog 4</a></li>
+                                  </ul>
+                                  <!--/ Desktop Sub-Menus -->
+                                </li>
+                                <li><a href="#">Team</a>
+                                      <!-- Desktop Sub-Menus -->
+                                     <ul class="desktop-sub-menu">
+                                    <li><a href="#">Team 1</a></li>
+                                    <li><a href="#">Team 2</a></li>
+                                    <li><a href="#">Team 3</a></li>
+                                    <li><a href="#">Team 4</a></li>
+                                  </ul>
+                                  <!--/ Desktop Sub-Menus -->
+                                </li>
+                                <li><a href="#">Gallery</a>
+                                      <!-- Desktop Sub-Menus -->
+                                     <ul class="desktop-sub-menu">
+                                    <li><a href="#">Gallery 1</a></li>
+                                    <li><a href="#">Gallery 2</a></li>
+                                    <li><a href="#">Gallery 3</a></li>
+                                    <li><a href="#">Gallery 4</a></li>
+                                  </ul>
+                                  <!--/ Desktop Sub-Menus -->
+                                </li>
+                                <li><a href="#">Contact</a>
+                                      <!-- Desktop Sub-Menus -->
+                                     <ul class="desktop-sub-menu">
+                                    <li><a href="#">Contact 1</a></li>
+                                    <li><a href="#">Contact 2</a></li>
+                                    <li><a href="#">Contact 3</a></li>
+                                    <li><a href="#">Contact 4</a></li>
+                                  </ul>
+                                  <!--/ Desktop Sub-Menus -->
+                                </li>
+                            </ul>
+                            <!--/ Desktop dropdown Menu  -->
+                            <div class="desktop-book-table">
+                                <a href="#" class="desktop-menu-btn">BOOK A TABLE</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--/ Desktop Navigation -->
+                <div class="slider-caption">
+                    <div class="wrapper">
+                        <div class="slider-text">
+                            <h1>Miranda</h1>
+                            <p>
+                                We offer a highly seasonal and continously evolving tasting menu experience</p>
+                                <br>
+                                <a href="#" class="slider-btn">CONTACT US</a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </header>    
+        </section>
+        <!-- Section two -->
+        <section id="two">
+          <div class="dinning-caverta-content">
+            <img src="https://images.pexels.com/photos/132694/pexels-photo-132694.jpeg?auto=compress&cs=tinysrgb&h=350" alt="cake" class="pastry">
+              <div class="dinning-content-wrapper">
+                <h5 class="welcome-title">
+                  <span class="title-line"></span>
+                  Welcome
+                  <span class="title-line"></span>
+                </h5>
+                <h2>Dining at <span class="caverta">Caverta</span></h2>
+                  <p>For a truly memorable dining experience, cuisine and atmosphere are paired as thoughtfully as food and wine. Ut enim ad minim veniam, quis nostrud exercitation ullamco. Quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Animi, id est laborum et dolorum fuga. Nam libero.</p>
+                  <button class="blue-global-btn">Book a table</button>
+            </div>
+            <img src="https://images.pexels.com/photos/9095/pexels-photo.jpg?auto=compress&cs=tinysrgb&h=350" alt="Pastry" class="pastry">
+          </div>
+          <!-- Parallax "Come and See" -->
+          <div class="parallax-a">
+              <div class="parallax">
+                  <div class="parallax-inner-wrapper"> 
+                      <h5 class="welcome-title">
+                          <span class="title-line"></span>
+                          Come and see
+                          <span class="title-line"></span>
+                        </h5>
+                     <h1 class="heading-one"> We create delicious experiences </h1>
+                  </div>
+               </div>
+          </div>
+          <!--/ Parallax "Come and See" -->
+          <!-- Menu -->
+          <div id="menu">
+              <!-- Menu-Content -->
+              <div class="menu-content-wrapper">
+                  <h5 class="welcome-title">
+                    <span class="title-line"></span>
+                        Discover
+                      <span class="title-line"></span>
+                    </h5>
+                    <h1 class="heading-one">Menu a la Carte</h1>
+                    <p>Explore texture, color and of course the ultimate tastes with our menu of the season. All the ingredients are fresh and carefully selected by our chefs. Enjoy an extraordinary dinning experience.</p>
+               </div>
+               <!--/ Menu-Content -->
+              <!-- Menu Tab -->
+              <ul class="menu-tab">
+                <li><a href="#">starters</a></li>
+                <li><a href="#" class="current">Main Course</a></li>
+                <li><a href="#">Soups</a></li>
+                <li><a href="#">Desserts</a></li>
+              </ul>
+               <!--/ Menu Tab -->
+              <!-- Menu Choices Title and Prices -->
+              <div class="menu-choices">
+                  <!-- Menu Item 1 -->
+                  <div class="menu-item">
+                      <div class="menu-item-title-price">
+                        <h6 class="menu-title">Braised Pork Chops</h6>
+                        <h6 class="menu-price">$21.00</h6>
+                      </div>
+                      <p>4 bone-in pork chops, olive oil, garlic, onion</p>
+                     <hr class="menu-horizontal-style">
+                  </div>
+                  <!-- Menu Item 2 -->
+                  <div class="menu-item">
+                      <div class="menu-item-title-price">
+                        <h6 class="menu-title">Coconut Fried Chicken</h6>
+                        <h6 class="menu-price">$19.00</h6>
+                      </div>
+                      <p>8 chicken pieces, coconut milk, oil</p>
+                     <hr class="menu-horizontal-style">
+                  </div>
+                  <!-- Menu Item 3 -->
+                  <div class="menu-item">
+                      <div class="menu-item-title-price">
+                        <h6 class="menu-title">Chicken with Garlic & Tomatoes</h6>
+                        <h6 class="menu-price">$15.00</h6>
+                      </div>
+                      <p>Chicken, cherry tomatoes, olive oil, dry white wine</p>
+                     <hr class="menu-horizontal-style">
+                  </div>
+                  <!-- Menu Item 4 -->
+                  <div class="menu-item">
+                      <div class="menu-item-title-price">
+                        <h6 class="menu-title">Prime Rib</h6>
+                        <h6 class="menu-price">$25.00</h6>
+                      </div>
+                      <p>Rib, rosemary, black pepper, red wine</p>
+                     <hr class="menu-horizontal-style">
+                  </div>
+                  <!-- Menu Item 5 -->
+                  <div class="menu-item">
+                      <div class="menu-item-title-price">
+                        <h6 class="menu-title">Sriracha Beef Skewers</h6>
+                        <h6 class="menu-price">$18.00</h6>
+                      </div>
+                      <p>Beef, garlic, sesame oil, vinegar</p>
+                     <hr class="menu-horizontal-style">
+                  </div>
+                  <!-- Menu Item 6 -->
+                  <div class="menu-item">
+                      <div class="menu-item-title-price">
+                        <h6 class="menu-title">Crispy Tuna Fregola</h6>
+                        <h6 class="menu-price">$22.00</h6>
+                      </div>
+                      <p>Fregola, Baby Arugula Roasted, Green Olives, Pine Nuts</p>
+                     <hr class="menu-horizontal-style">
+                  </div>
+                  <!-- Menu Item 7 -->
+                  <div class="menu-item">
+                      <div class="menu-item-title-price">
+                        <h6 class="menu-title">Charred Lamb Ribs</h6>
+                        <h6 class="menu-price">$20.00</h6>
+                      </div>
+                      <p>Za’atar, Turkish BBQ, Sesame Yoghurt</p>
+                     <hr class="menu-horizontal-style">
+                  </div>
+              </div>
+              <!--/ Menu Choices Title and Prices -->
+          </div>
+          <!-- / Menu -->
+              <!-- Parallax "Come and See" -->
+          <div class="parallax-b">
+              <div class="parallax">
+                  <div class="parallax-inner-wrapper"> 
+                      <h5 class="welcome-title">
+                          <span class="title-line"></span>
+                          now booking
+                          <span class="title-line"></span>
+                        </h5>
+                     <h1 class="heading-one"> Private Dinners & Happy Hours </h1>
+                  </div>
+               </div>
+          </div>
+          <!--/ Parallax "Come and See" -->             
+        </section>
+        <!-- /Section two -->
+        <!-- section three -->
+ <section id="three">     
+   <div id="team">
+       <div class="team-content">
+          <h5 class="welcome-title"><span class="title-line"></span>Behind the scene <span class="title-line"></span>
+          </h5>
+           <h1 class="heading-one">The Team</h1>
+           <p>For a truly memorable dining experience, cuisine and atmosphere are paired as thoughtfully as food and wine. Ut enim ad minim veniam, quis nostrud exercitation ullamco. Quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Animi, id est laborum et dolorum fuga. Nam libero.</p>
+           <button class="blue-global-btn">Find More</button>
+       </div>
+       <div class="team-images">
+         <div class="team-image-one">
+           <img src="https://images.pexels.com/photos/724212/pexels-photo-724212.jpeg?auto=compress&cs=tinysrgb&h=900" alt="">
+         </div>
+         <div class="team-image-one">
+           <img src="https://images.pexels.com/photos/724212/pexels-photo-724212.jpeg?auto=compress&cs=tinysrgb&h=900" alt="">
+         </div>
+    </div>
+  </div>
+<!-- Testimonials -->
 
-							</li>
-						</ul>
-					</div>
-				</div>
-				<!-- /Mobile Menu  -->
-				<div class="slider-caption">
-					<div class="wrapper">
-						<div class="slider-text">
-							<div class="intro-text">DINNING AT</div>
-							<h1>Miranda</h1>
-							<p>
-								<span class="intro-text-paragraph"> We offer a highly seasonal and </span>continously evolving tasting menu experience.</p>
-							<br>
-							<a href="#" class="slider-btn">CONTACT US</a>
-						</div>
-						<div id="slider-circle-icon">
-							<i class="fa fa-circle" aria-hidden="true"></i>
-							<i class="fa fa-circle" aria-hidden="true"></i>
-							<i class="fa fa-circle" aria-hidden="true"></i>
-						</div>
-					</div>
-				</div>
-			</nav>
-		</header>
+<div id="testimonials">
+     <div id="my-slider" class="carousel slide" data-ride="carousel"         data-interval="10000">
+       <div class="testimonials-title">
+           <h5 class="welcome-title"><span class="title-line"></span>TESTIMONIALS<span class="title-line"></span>
+           </h5>
+            <h1 class="heading-one">What Clients Say</h1>
+       </div>
+           <!-- Indicator dot Nov -->
+           <ol class="carousel-indicators">
+              <li data-target="#my-slider" data-slide-to="0 " class="active"></li>
+              <li data-target="#my-slider" data-slide-to="1"></li>
+              <li data-target="#my-slider" data-slide-to="2"></li>
+          </ol>
+          <!--/ Indicator dot Nov -->
+          <!-- Wrapper for Slides -->
+    <div class="carousel-inner" role="listbox">
+        <!-- Carousel Pages Only first One Needs the Active  First Page-->
+        <div class="item active">
+            <!-- Pexels Demo Image For Restaurant First Image -->
+            <div class="carousel-caption">
+                <div class="carousel-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi officiis maxime necessitatibus aut reiciendis vel rem adipisci, assumenda est praesentium repudiandae cupiditate et tempora, numquam corrupti exercitationem facilis quos quam perspiciatis error minima fuga officia vero sequi. Earum expedita, quia dignissimos itaque nam vitae dolor.</div>
+            </div>
+        </div>
 
-	</section>
-	<!-- Section two -->
-	<section id="two">
+        <div class="item ">
+            <!-- Pexels Demo Image For Restaurant First Image -->
+            <div class="carousel-caption">
+                <div class="carousel-text">Mikko Pogi</div>
+            </div>
+        </div>
 
-	</section>
-	<!-- /Section two -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="script.js"></script>
-</body>
+        <div class="item ">
+            <!-- Pexels Demo Image For Restaurant First Image -->
+            <div class="carousel-caption">
+                <div class="carousel-text">Miranda</div>
+            </div>
+        </div>
+      </div>  
+    </div>
+ </div>
 
-</html>
+<!--/ Testimonials -->
+
+
+</section>
+<!--/ section three -->
+
+
+
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- Main Javascript File -->
+        <script src="script.js"></script>
+    </body>
+    
+    </html>

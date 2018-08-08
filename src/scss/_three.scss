@@ -1,0 +1,164 @@
+#three {
+    // width: 95%;
+    // margin: 0 auto;
+    // needs to be removed after done with section three
+    #team {
+      width: 95%;
+      margin: 0 auto;
+    }
+    margin-bottom : 16rem;
+    @media (min-width: 768px){
+     #team {
+       display: grid;
+       grid-template-columns: repeat(2 , 1fr);
+       max-width: 1300px;
+       margin: 0 auto;
+       grid-column-gap: 3rem;
+     }
+    }
+   .team-content{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    @include welcomeTitle($blue-btn, $black);
+    .heading-one {
+      font-size: 1.8rem;
+      letter-spacing: 1px;
+      @media (min-width: 768px){
+        font-size: 46px;   
+      }
+    }
+  }
+     p {
+       width: 95%;
+       text-align: center;
+       font-weight: 400;
+       margin: 3rem 0;
+       @media (min-width: 768px){
+        line-height: 1.8rem;
+        width: 100%;
+        
+      }
+     }
+     @include blueGlobalBtn();
+     .blue-global-btn {
+       margin: 0 auto;
+       margin-bottom: 3rem;
+     }
+     //team images
+     .team-images {
+       @media (min-width: 768px){
+        margin-top: 10rem;
+       }
+       img {
+        max-width: 100%;
+        @media (min-width: 768px){ 
+        }
+       }
+       //needs to remove later 
+       margin-bottom: 5rem;
+       display: grid;
+       grid-template-columns: repeat(2, 1fr);
+       grid-column-gap: 25px;
+       justify-items: center;
+       margin: 0 auto;
+      
+      }
+#testimonials {
+  position: relative;
+  background: $black;
+  height: 900px;
+  background-image: url(https://images.pexels.com/photos/374860/pexels-photo-374860.jpeg?auto=compress&cs=tinysrgb&h=1200);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: block;
+    background-color: rgba(0, 0, 0, 0.463);
+  }
+  
+  .testimonials-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+      @include welcomeTitle($white, $white);
+      .heading-one {
+        font-size: 1.8rem;
+        letter-spacing: 1px;
+        @media (min-width: 768px){
+          font-size: 46px;   
+        }
+      }
+       p {
+         width: 95%;
+         text-align: center;
+         font-weight: 400;
+         margin: 3rem 0;
+         @media (min-width: 768px){
+          line-height: 1.8rem;
+          width: 100%;       
+       }
+     }
+   }
+   .carousel-caption{
+     position: initial;
+   }
+   .carousel-text {
+     color: $white;
+     line-height: 2rem;
+
+   }
+    .carousel-indicators {
+      position: absolute;
+      top: 100vh;
+     }
+}
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+} // three ends here
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

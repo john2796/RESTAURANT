@@ -1,0 +1,248 @@
+#two {
+  .dinning-caverta-content {
+  }
+  @media (min-width: 735px){
+    .dinning-caverta-content{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 720px;
+      margin: 0 auto;
+    }
+  }
+  @media (min-width: 960px){
+    .dinning-caverta-content{
+      width: 960px;
+      margin: 0 auto;
+    }
+  }
+  @media (min-width: 1131px){
+    .dinning-caverta-content{
+      width: 1131px;
+      margin: 0 auto;
+    }
+  }
+  @media (min-width: 1219px){
+    .dinning-caverta-content{
+      width: 1219px;
+      margin: 0 auto;
+    }
+  }
+  .dinning-content-wrapper {
+    text-align: center;
+    margin: 0 auto;
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    @include welcomeTitle($blue-btn, $black);
+   p {
+     margin: 60px 0 52px 0;
+     line-height: 1.5rem;
+     font-weight: 400;
+     letter-spacing: 0.5px;
+   } 
+   h2 {
+    font-size: 1.8rem;
+    font-weight: 300;
+    font-family: 'lora';
+    @media (min-width: 735px){
+      font-size: 3rem;
+      line-height: 4rem;
+      letter-spacing: 1px;
+    }
+  }
+  @include blueGlobalBtn();
+ } //dinning-content-wrapper Ends here
+     // Media Queries for Dinning Caverta Content
+ .pastry {
+ max-width: 100%;
+ max-height: 100%;
+ width: 150px;
+ height: 210px;
+ object-fit: cover;
+ margin: 0 20px;
+ @media (max-width: 735px){
+   display: none;
+  }
+ @media (min-width: 960px){
+   width: 200px;
+   height: 280px;
+  }
+ @media (min-width: 1131px){
+  width: 250px;
+  height: 357px;
+ }
+ @media (min-width: 1219px){
+  width: 245px;
+  height: 357px;
+ }
+} // Pastry Ends Here
+
+// Parallax Styling Starts Here
+.parallax-a {
+.parallax {
+    /* The image used */
+  background-image: url(https://images.pexels.com/photos/271458/pexels-photo-271458.jpeg?auto=compress&cs=tinysrgb&h=1200);
+     /* Set a specific height */
+     /* Create the parallax scrolling effect */
+    //  background-attachment: fixed;
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+  @media (min-width: 1200px){
+    background-attachment: fixed;
+  }   
+ }
+ .parallax-inner-wrapper {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.305);
+  }
+}
+.parallax-inner-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  @include welcomeTitle($white, $white);
+  
+  .welcome-title{
+    margin-top: 9rem;
+  }
+    .heading-one{
+    margin-bottom: 8.8rem;
+  }
+    @media (min-width: 768px){
+      .heading-one{
+      font-size: 3rem;
+      line-height: 4.3rem;
+      width: 80%;
+    }
+  }
+ }
+
+// Menu Starts Here
+#menu {
+  width: 95%;
+  margin: 0 auto;
+  margin-bottom: 100px;
+.menu-content-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  @include welcomeTitle($blue-btn, $black);
+  @media (min-width: 768px){
+    .heading-one{
+      font-size: 48px;
+    }
+  }
+   p {
+     font-weight: 400;
+     width: 100%;
+     text-align: center;
+     line-height: 1.5rem;
+     margin: 3rem 0;
+     color: $light-black;
+     letter-spacing: 0.6px;
+     @media (min-width: 1000px){
+       width: 60%;
+     }
+   } 
+  }
+
+ // Menu Tab Starts Here
+ .menu-tab {
+   display: flex;
+   flex-wrap: wrap;
+   margin-bottom: 3rem;
+   @media (min-width: 768px){
+     justify-content: center;
+   }
+   a {
+     display: inline-block;
+     color: $black;
+     text-transform: uppercase;
+     font-weight: 400;
+     letter-spacing: 1px;
+     padding-right: 2rem;
+     line-height: 3rem;
+     text-decoration: none;
+     transition: all 500ms;
+     &:hover {
+       color: $blue-btn;
+     }
+   }
+   .current {
+    color: $blue-btn;
+   }
+ }
+ // Menu Tab Ends Here
+
+ // Menu Choices
+  .menu-choices {
+    // need to delete once i have items below later !
+    @media (min-width: 768px){
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     width: 90%;
+     margin: 0 auto;
+     column-gap: 54px;
+    }
+    @media (min-width: 1000px){
+      width: 960px; 
+      margin: 0 auto;
+    }
+  } 
+  
+  // !/ Menu Choices
+  .menu-item {
+    margin-bottom: 1.8rem;
+  .menu-item-title-price {
+    display: flex;
+    justify-content: space-between;
+    font-weight:600;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-family: lora;
+   }
+   p {
+     margin: 12px 0 1.6rem 0;
+     font-style: italic;
+     font-size: 13px;
+     letter-spacing: 1px;
+     color: $black;
+   }
+   .menu-horizontal-style {
+    border: 0;
+    border-bottom: 1px dashed #ccc;
+    background: #999;
+   }
+  }
+ // Menu Choices Ends Here 
+ } //Menu Ends Here
+ .parallax-b {
+
+.parallax {
+    /* The image used */
+  background-image: url(https://images.pexels.com/photos/6267/menu-restaurant-vintage-table.jpg?auto=compress&cs=tinysrgb&h=1200);
+     /* Set a specific height */
+     /* Create the parallax scrolling effect */
+    //  background-attachment: fixed;
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+  @media (min-width: 1200px){
+    background-attachment: fixed;
+  }   
+ }
+ .parallax-inner-wrapper {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.305);
+  }
+ }
+} //#two Ends Here
